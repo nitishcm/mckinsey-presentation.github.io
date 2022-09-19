@@ -46,29 +46,34 @@ class: center, middle
       - Apache based webserver
       - Common webserver for all the applications
       - The frontend to redirect the incoming call to required application or url
+---
+      
 - Application : 
        - Java base applications
        - Works with CMS as backend
 - Version control :
       - Migrating all source code in Github
+      - Setting up github flow and PR review for merging
 ---
 # Challenges
       
-- Only one instance of CMS master can run as it also has desktop app and web app
-- No support for CMS as it is obselete
+- Only one instance of CMS master can run as it also has desktop app and web app.
+- No support for CMS as it is obselete.
 - Containerization of application along with CMS slave, Solr slave. 
-- Third party integration coordinations
+- Third party integration coordinations.
 - No availability of exact number of requests. No previous firewall present.
-- No DevOps pipeline
-- Migration of large databases
-- Setting up Github for all the applications
-- Coordination with stakeholders on changes in URLs to connect to services
+- No DevOps pipeline.
+- Migration of large databases.
+- Setting up Github for all the applications.
+- Coordination with stakeholders on changes in URLs to connect to services.
       
 ---
-# DevOps 
+# DevOps & other implementations
       
 - Implementation of Jenkins pipeline for deployment 
 - Jenkins hosted on an EC2 (no support of EFS with ECS at that time)
+- Implementation of Lambdas to shut down infra during weekend and start infra on Monday
+- AWS configs to manage complaince
       
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
