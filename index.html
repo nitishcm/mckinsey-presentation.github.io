@@ -35,7 +35,9 @@ class: center, middle
 
 # Introduction
  - Migration from on premise to AWS
- - Timeline : 2 year (Phase 1 - initial migration, Phase 2 - Upgrades and improvements)
+ - Timeline : 
+      - Migration to AWS within 11 months
+      - 2 year (Phase 1 - initial migration, Phase 2 - Upgrades and improvements)
 
 ---
       
@@ -44,7 +46,17 @@ class: center, middle
       - Work as master slave 
       - Master can only run as single instance
       - Slave to be run along with application in container
--
+- Solr: 
+      - Works as slave master
+      - Feeds are coming from other internal and external integrations 
+-  Webserver :
+      - Apache based webserver
+      - Common webserver for all the applications
+      - The frontend to redirect the incoming call to required application or url
+- Application : 
+       - Java base applications
+       - Works with CMS as backend
+
       
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
