@@ -21,27 +21,20 @@
 
 class: center, middle
 
-# Title
-
----
 
 # Agenda
 
 1. Introduction
-2. Considerations
-
+2. Challenges
+3. DevOps
 
 ---
 
 # Introduction
- - Migration from on premise to AWS
+ - Migration from on premise to AWS (application, db, deployment scripts, solr, cms)
  - Timeline : 
       - Migration to AWS within 11 months
       - 2 year (Phase 1 - initial migration, Phase 2 - Upgrades and improvements)
-
----
-      
-# Considerations 
 - CMS:
       - Work as master slave 
       - Master can only run as single instance
@@ -56,7 +49,26 @@ class: center, middle
 - Application : 
        - Java base applications
        - Works with CMS as backend
-
+- Version control :
+      - Migrating all source code in Github
+---
+# Challenges
+      
+- Only one instance of CMS master can run as it also has desktop app and web app
+- No support for CMS as it is obselete
+- Containerization of application along with CMS slave, Solr slave. 
+- Third party integration coordinations
+- No availability of exact number of requests. No previous firewall present.
+- No DevOps pipeline
+- Migration of large databases
+- Setting up Github for all the applications
+- Coordination with stakeholders on changes in URLs to connect to services
+      
+---
+# DevOps 
+      
+- Implementation of Jenkins pipeline for deployment 
+- Jenkins hosted on an EC2 (no support of EFS with ECS at that time)
       
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
